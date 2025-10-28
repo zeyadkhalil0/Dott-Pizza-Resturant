@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+
+ul {
+    list-style: none;
+}
+
+section {
+    position: relative;
+    background-image: url("./assets/pizza-bg-orange.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+}
+
+
+
+section > *{
+    position: relative;
+    z-index: 1;
+}
+
+section .Pizza {
+    border-radius: 999px;
+    outline: 2px solid #dddd;
+  transform-origin: center  !important;
+  animation: rotatePizza 15s linear infinite;
+}
+
+/* Keyframes for continuous circular spin */
+@keyframes rotatePizza {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
