@@ -44,22 +44,19 @@ const settings = {
 
   return (
   
-    <section className=" w-full overflow-x-hidden">
+    <section className="Hero w-full overflow-x-hidden">
       <main className="h-full flex flex-col gap-6 py-20 bg-black/50">
         {/* Top */}
-        <div className="flex md:flex-row flex-col  items-center space-y-4 px-8 m-auto md:px-12">
+        <div className="flex md:flex-row flex-col  items-center md:space-x-8 space-y-4 px-8 m-auto md:px-12">
           {/* image */}
           <div className="Pizza md:w-64 md:h-64 w-36 h-36 drop-shadow-2xl">
             <img src={PizzaOven} alt="" className="rounded-full object-cover" />
           </div>
           {/* Text */}
-          <div className="md:w-2/3 flex flex-col text-center items-center justify-between space-y-4 text-white">
-            <h1 className="font-bold md:text-4xl text-md">Pizza Is Italiano</h1>
-            <p className="font-light  text-sm w-4/5">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus
-              eaque laborum rerum earum tempora illo delectus quia, officiis non
-              dolores, et culpa. Dicta nesciunt architecto sunt quos omnis velit
-              incidunt.
+          <div className="md:w-2/3 flex flex-col text-center items-center justify-between md:space-y-4 space-y-2 text-white">
+            <h1 className="font-bold md:text-4xl text-xl ">Experience True Italian Flavor</h1>
+            <p className="font-light md:text-lg text-sm w-4/5">
+              Classic Italian flavors in every slice — fresh, cheesy, and delicious.
             </p>
             <a href="#" className="bg-red-600 px-2.5 py-1.5 rounded-lg cursor-pointer">Order Now</a>
           </div>
@@ -74,7 +71,7 @@ const settings = {
                 <img
                   src={`https://hero-data.vercel.app/${pizza.image}`}
                   alt={pizza.name}
-                  className="w-full h-28 object-cover rounded-xl "
+                  className="w-full h-36 object-cover rounded-xl "
                   loading="lazy"
                   />
                   <div className=" flex flex-col  text-white z-50">

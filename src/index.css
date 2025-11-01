@@ -5,7 +5,8 @@ ul {
     list-style: none;
 }
 
-section {
+
+.Hero{
     position: relative;
     background-image: url("./assets/pizza-bg-orange.jpg");
     background-position: center;
@@ -21,11 +22,20 @@ section > *{
     z-index: 1;
 }
 
-section .Pizza {
+.Hero .Pizza {
     border-radius: 999px;
     outline: 2px solid #dddd;
   transform-origin: center  !important;
   animation: rotatePizza 15s linear infinite;
+}
+
+.Items-button > button{
+  background-color: red;
+  padding: 10px 15px;
+  border-radius: 10px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
 }
 
 /* Keyframes for continuous circular spin */
