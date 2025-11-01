@@ -88,7 +88,7 @@ useEffect(() => {
               <h1 className="text-xl mx-auto text-white animate-ping">Loading...</h1>
             </div>
           )}
-      <section className="px-20 mt-16 bg-orange-300">
+      <section className="md:px-20 px-2 mt-16 bg-orange-300">
         <h1 className="text-center text-3xl font-semibold py-4">
           Discover Items
         </h1>
@@ -110,7 +110,7 @@ useEffect(() => {
       </section>
 
         
-      <section className="px-20 pb-16 mb-16 bg-orange-300">
+      <section className="md:px-20 px-10 pb-16 mb-16 bg-orange-300">
 
         {error && (
           <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded">
@@ -130,7 +130,7 @@ useEffect(() => {
             {filteredItems.map((item) => (
               <div
                 key={item.id}
-                className="bg-white rounded-lg shadow-2xl hover:shadow-xl transition-shadow overflow-hidden"
+                className="bg-white rounded-lg shadow-2xl hover:shadow-xl transition-shadow overflow-hidden w-full"
               >
                 {item.image_url && (
                   <img
