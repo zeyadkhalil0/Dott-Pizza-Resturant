@@ -12,7 +12,7 @@ const Items = () => {
     "Pizza",
     "Pasta",
     "Fries",
-    "Extra",
+    "Extras",
     "Dessert",
   ];
 
