@@ -111,7 +111,7 @@ const Hero = () => {
                     className="w-full h-36 object-cover rounded-t-xl "
                     loading="lazy"
                   />
-                  <div className=" flex flex-col px-4 text-white z-50">
+                  <div className=" flex flex-col px-4  text-white z-50">
                     <h2 className="md:text-2xl text-md font-bold">{pizza.name}</h2>
                     <p className="md:text-[1rem] text-[8px] text-gray-300 mt-1">{pizza.title}</p>
                   </div>
