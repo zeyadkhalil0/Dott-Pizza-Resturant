@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import PizzaOven from "../assets/Peproni-Pizza.png";
+import PizzaOven from "../assets/Peproni-Pizza.webp";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -103,17 +103,17 @@ const Hero = () => {
         <div className="md:w-2/3 w-full py-4 m-auto">
           <Slider {...settings}>
             {items.map((pizza) => (
-              <div className="Card-Container px-4">
-                <div className="flex flex-col  items-center h-64 text-center  space-y-4 px-2 py-4 rounded-xl bg-black/30 backdrop-blur-2xl overflow-hidden">
+              <div className="Card-Container px-4" key={pizza.id}>
+                <div className="flex flex-col  items-center h-64 text-center  space-y-4   rounded-xl bg-black/30 backdrop-blur-2xl overflow-hidden">
                   <img
                     src={pizza.image}
                     alt={pizza.name}
-                    className="w-full h-36 object-cover rounded-xl "
+                    className="w-full h-36 object-cover rounded-t-xl "
                     loading="lazy"
                   />
                   <div className=" flex flex-col  text-white z-50">
                     <h2 className="md:text-2xl text-md font-bold">{pizza.name}</h2>
-                    <p className="md:text-lg text-[8px] text-gray-300 mt-1">{pizza.title}</p>
+                    <p className="md:text-[1rem] text-[8px] text-gray-300 mt-1">{pizza.title}</p>
                   </div>
                 </div>
               </div>
@@ -125,4 +125,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default React.memo(Hero);

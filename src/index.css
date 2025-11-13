@@ -1,6 +1,10 @@
 @import "tailwindcss";
-
-
+*{
+  box-sizing: border-box;
+}
+html{
+  scroll-behavior: smooth;
+}
 ul {
     list-style: none;
 }
@@ -8,7 +12,7 @@ ul {
 
 .Hero{
     position: relative;
-    background-image: url("./assets/pizza-bg-orange.jpg");
+    background-image: url("./assets/pizza-bg-orange.webp");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

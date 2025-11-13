@@ -84,7 +84,7 @@ useEffect(() => {
   return (
     <>
 {loading && (
-            <div className="absolute flex flex-col space-y-8  items-center justify-center bg-orange-300 inset-0 w-screen h-screen z-50 overflow-hidden">
+            <div className="fixed flex flex-col space-y-8  items-center justify-center bg-orange-300 inset-0 w-screen h-full z-50 overflow-hidden">
               <Loader/>
               <h1 className="text-xl mx-auto text-white animate-ping">Loading...</h1>
             </div>
@@ -138,7 +138,10 @@ useEffect(() => {
                   <img
                     src={item.image_url}
                     alt={item.name}
-                    className="w-full h-48 object-cover"/>  
+                    className="w-full h-48 object-cover"
+                    loading="lazy"
+                    />  
+                    
                 )}
                 {/* Item-Name Desc Badge */}
                 <div className="p-4 flex flex-col justify-between">
