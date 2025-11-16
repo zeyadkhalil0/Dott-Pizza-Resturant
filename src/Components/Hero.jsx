@@ -91,10 +91,10 @@ const Hero = () => {
               delicious.
             </p>
             <a
-              href="#"
+              href="#items"
               className="bg-red-600 px-2.5 py-1.5 rounded-lg cursor-pointer"
             >
-              Order Now
+              View Items
             </a>
           </div>
         </div>

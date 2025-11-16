@@ -84,12 +84,12 @@ useEffect(() => {
   return (
     <>
 {loading && (
-            <div className="fixed flex flex-col space-y-8  items-center justify-center bg-orange-300 inset-0 w-screen h-full z-50 overflow-hidden">
+            <div className="fixed flex flex-col space-y-8  items-center justify-center bg-orange-300 inset-0 w-screen h-[100vh] z-50 overflow-hidden">
               <Loader/>
               <h1 className="text-xl mx-auto text-white animate-ping">Loading...</h1>
             </div>
           )}
-      <section className="md:px-20 px-2 mt-16 bg-orange-300">
+      <section id="items" className="md:px-20 px-2 mt-16 bg-orange-300">
         <h1 className="text-center text-3xl font-semibold py-4">
           Discover Items
         </h1>
@@ -111,7 +111,7 @@ useEffect(() => {
       </section>
 
         
-      <section className="md:px-20 px-10 pb-16 mb-16 bg-orange-300">
+      <section  className="md:px-20 px-10 pb-16 mb-16 bg-orange-300">
 
         {error && (
           <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded">
@@ -161,8 +161,7 @@ useEffect(() => {
                           : item.price_m.replace("M", "").trim()}
                       </span>
                     )}
-                    
-                    
+
                     {item.category && (
                       <span className="text-xs bg-orange-100 text-orange-800 px-2 py-1 rounded">
                         {item.category}
