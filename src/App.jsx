@@ -3,11 +3,13 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './Components/Navbar';
 import AboutUs from './Pages/AboutUs';
 import ParentOfComponents from './Components/Parent-of-Components';
+import ScrollToTop from './Components/ScrollTotop';
 
 function App() {
   return (
     <Router>
       <Navbar /> 
+      <ScrollToTop/>
       <Routes>
         <Route path="/" element={<ParentOfComponents />} />
         <Route path="/about" element={<AboutUs />} />

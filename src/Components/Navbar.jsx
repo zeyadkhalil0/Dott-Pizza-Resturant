@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { FaBars, FaTimesCircle, FaShoppingCart } from "react-icons/fa";
 import { MdFavoriteBorder, MdAccountCircle } from "react-icons/md";
+import { HashLink } from "react-router-hash-link";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -48,10 +49,9 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
-            <a href="#items" className="px-4 py-2 rounded transition-all">
+            <HashLink smooth to="/#items" className="px-4 py-2 rounded">
               Items
-            </a>
-            
+            </HashLink>
           </li>
           <li>
             <a
@@ -81,6 +81,7 @@ const Navbar = () => {
           <MdFavoriteBorder />
         </div>
 
+        {/* Mobile Nav */}
         <div
           className="Hamburger-Menu md:hidden text-lg"
           onClick={() => setIsOpen(!isOpen)}
@@ -102,9 +103,9 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
-            <a href="#items" className="px-4 py-2 rounded transition-all">
+            <HashLink smooth to="/#items" className="px-4 py-2 rounded">
               Items
-            </a>
+            </HashLink>
           </li>
           <li>
             <a
