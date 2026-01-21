@@ -75,7 +75,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm mb-4 md:mb-0">
-            © 2025 Our Restaurant. All rights reserved.
+            © 2025 Our Restaurant. All rights reserved. Made by Dev | <a href="https://codezeesocialist.vercel.app" target='blank' className='underline font-semibold text-gray-100'>Zeyad Muhammad Khalil</a>
           </p>
           <div className="flex space-x-6">
             <a href="#" className="text-gray-400 hover:text-orange-500 transition-colors">

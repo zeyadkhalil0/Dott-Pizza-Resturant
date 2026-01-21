@@ -9,14 +9,16 @@ const Items = () => {
   const [error, setError] = useState(null);
 
   const categories = [
-    "All Items",
-    "Pizza",
-    "Pasta",
-    "Fries",
-    "Extras",
-    "Drinks",
-    "Dessert",
-  ];
+  { label: "All Items", value: "all" },
+  { label: "Pizza", value: "pizza" },
+  { label: "Pasta", value: "pasta" },
+  { label: "Fries", value: "fries" },
+  { label: "Extras", value: "extras" },
+  { label: "Drinks", value: "drinks" },
+  { label: "Dessert", value: "dessert" },
+  { label: "Pizza Box", value: "pizza-box" },
+];
+
 
   // Supabase configuration
   const SUPABASE_URL = "https://qbojtxkeayxsszvnblau.supabase.co";
@@ -39,7 +41,7 @@ const Items = () => {
       const data = await response.json();
       setItems(data || []);
       setFilteredItems(data || []);
-      localStorage.setItem("items", JSON.stringify(data || [])); // Cache items
+      // localStorage.setItem("items", JSON.stringify(data || [])); // Cache items
     } catch (err) {
       setError(err.message);
       console.error("Error fetching items:", err);
@@ -71,17 +73,22 @@ const Items = () => {
   }, [loading]);
 
   // Filter items by category
-  const handleFilter = (category) => {
-    setActiveFilter(category);
-    if (category === "All Items") {
-      setFilteredItems(items);
-    } else {
-      const filtered = items.filter(
-        (item) => item.category?.toLowerCase() === category.toLowerCase()
-      );
-      setFilteredItems(filtered);
-    }
-  };
+  const handleFilter = (categoryValue) => {
+  setActiveFilter(categoryValue);
+
+  if (categoryValue === "all") {
+    setFilteredItems(items);
+  } else {
+    const filtered = items.filter(
+      (item) =>
+        item.category
+          ?.toLowerCase()
+          .replace(/\s+/g, "-") === categoryValue
+    );
+    setFilteredItems(filtered);
+  }
+};
+
 
   return (
     <>
@@ -98,15 +105,15 @@ const Items = () => {
         <div className="flex items-center justify-center py-8 gap-4 flex-wrap">
           {categories.map((category) => (
             <button
-              key={category}
-              onClick={() => handleFilter(category)}
+              key={category.value}
+              onClick={() => handleFilter(category.value)}
               className={`px-6 py-2 rounded-lg font-medium transition-all ${
-                activeFilter === category
+                activeFilter === category.value
                   ? "bg-orange-600 text-white shadow-lg"
                   : "bg-white text-orange-600 hover:bg-orange-100"
               }`}
             >
-              {category}
+              {category.label}
             </button>
           ))}
         </div>
